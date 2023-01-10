@@ -10,14 +10,15 @@ public class MinimumCostClimbingStair_Leetcode {
         for (int i = 0; i < n; i++) {
             cost[i] = sc.nextInt();
         }
-        //Memorization
+            //Memorization
          int startWithZero = minCost_memo(cost,0, new int[cost.length+1]);
          int startWithOne = minCost_memo(cost,1, new int[cost.length+1]);
         System.out.println(Math.min(startWithZero,startWithOne));
         //------------------------------------------------
-       // Tabulation
+            // Tabulation
         System.out.println(minCost_tab(cost, new int[cost.length+1]));
         //---------------------------------------------------
+            // Most Optimized
         System.out.println(minCost_tab_mostOptimized(cost));
     }
     //Memorization
