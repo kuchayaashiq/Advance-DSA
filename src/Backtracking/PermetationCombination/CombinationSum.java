@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class CombinationSum {
 
-    public static void getPermutations(int[] nums,int idx, int tar, int csum, List<List<Integer>>ans, List<Integer> curr){
+    public static void getCombinations(int[] nums,int idx, int tar, int csum, List<List<Integer>>ans, List<Integer> curr){
         if(csum>tar){
             return;
         }
@@ -17,20 +17,18 @@ public class CombinationSum {
             }
             return;
         }
-
         //Include
         curr.add(nums[idx]);
-        getPermutations(nums, idx, tar, csum + nums[idx], ans, curr);
+        getCombinations(nums, idx, tar, csum + nums[idx], ans, curr);
         curr.remove(curr.size() - 1);
-
         // not Include
-        getPermutations(nums, idx+1, tar, csum,ans, curr);
+        getCombinations(nums, idx+1, tar, csum,ans, curr);
     }
     public static List<List<Integer>> combinationSum(int[] nums, int target){
         //write your code here
         List<List<Integer>> ans =  new ArrayList<>();
 
-        getPermutations(nums,0, target,0,ans, new ArrayList<>());
+        getCombinations(nums,0, target,0,ans, new ArrayList<>());
         return ans;
     }
     public static void main(String args[]) {
