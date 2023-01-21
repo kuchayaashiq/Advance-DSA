@@ -3,7 +3,7 @@ package DynamicProgramming.StringDP;
 import java.util.Scanner;
         /*
                 You are given a string S, Your task is to count number of subsequences
-                of the form aibjck, where i >= 1, j >=1 and k >= 1.
+                of the form a^i,b^j,c^k, where i >= 1, j >=1 and k >= 1.
                 Note:
                 Two subsequences are considered different if the set of array indexes picked for the
                 2 subsequences are different.
