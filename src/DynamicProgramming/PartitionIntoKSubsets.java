@@ -13,7 +13,7 @@ public class PartitionIntoKSubsets {
                 } else if (p == t) {
                     dp[p][t] = 1;
                 } else {
-                    dp[t][p] = dp[t - 1][p - 1] + dp[t][p - 1] * t;
+                    dp[t][p] = (dp[t - 1][p - 1]%100007 + (dp[t][p - 1] * t)%100007)%100007;
                 }
             }
         }

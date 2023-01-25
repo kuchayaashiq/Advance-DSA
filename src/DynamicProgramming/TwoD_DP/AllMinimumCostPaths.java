@@ -53,33 +53,26 @@ public class AllMinimumCostPaths {
             }
         }
         System.out.println(dp[0][0]);
+        ArrayDeque<Pair> queue = new ArrayDeque<>();
+        queue.add(new Pair("", 0, 0));
+        while(queue.size() > 0){
+            Pair rem = queue.removeFirst();
 
-        ArrayDeque<Pair> dq = new ArrayDeque<>();
-        dq.add(new Pair("", 0,0));
-
-        while(dq.size() > 0){
-            Pair rem  =  dq.removeFirst();
-            if(rem.i == dp.length-1 &&rem.j == dp[0].length-1){
+            if(rem.i == dp.length - 1 && rem.j == dp[0].length - 1){
                 System.out.println(rem.psf);
-            }
-            else if(rem.i == dp.length){
-                dq.add(new Pair(rem.psf+"H",rem.i, rem.j+1));
-            }
-            else if(rem.j == dp[0].length-1){
-                dq.add(new Pair(rem.psf+"V",rem.i+1, rem.j));
-            }
-            else{
-                if(dp[rem.i][rem.j+1] < dp[rem.i+1][rem.j]){
-                    dq.add(new Pair(rem.psf+"H",rem.i, rem.j+1));
+            } else if(rem.i == dp.length - 1){
+                queue.add(new Pair(rem.psf + "H", rem.i, rem.j + 1));
+            } else if(rem.j == dp[0].length - 1){
+                queue.add(new Pair(rem.psf + "V", rem.i + 1, rem.j));
+            } else {
+                if(dp[rem.i][rem.j + 1] < dp[rem.i + 1][rem.j]){
+                    queue.add(new Pair(rem.psf + "H", rem.i, rem.j + 1));
+                } else if(dp[rem.i][rem.j + 1] > dp[rem.i + 1][rem.j]){
+                    queue.add(new Pair(rem.psf + "V", rem.i + 1, rem.j));
+                } else {
+                    queue.add(new Pair(rem.psf + "V", rem.i + 1, rem.j));
+                    queue.add(new Pair(rem.psf + "H", rem.i, rem.j + 1));
                 }
-                else if(dp[rem.i][rem.j+1] > dp[rem.i+1][rem.j]){
-                    dq.add(new Pair(rem.psf+"V",rem.i+1, rem.j));
-                }
-                else{
-                    dq.add(new Pair(rem.psf+"H",rem.i, rem.j+1));
-                    dq.add(new Pair(rem.psf+"V",rem.i+1, rem.j));
-                }
-
             }
         }
 

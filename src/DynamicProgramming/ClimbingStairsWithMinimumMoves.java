@@ -35,6 +35,6 @@ public class ClimbingStairsWithMinimumMoves {
             }
             memo[idx] = ans;
         }
-        return memo[0];
+        return moves[0];
     }
 }
