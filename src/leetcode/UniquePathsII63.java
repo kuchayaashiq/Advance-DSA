@@ -10,10 +10,6 @@ import java.util.Scanner;
  *
  */
 public class UniquePathsII63 {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
@@ -27,8 +23,7 @@ public class UniquePathsII63 {
 	static int dp[][];
     static int recur(int[][] obstacleGrid, int row, int col,int m,int n)
     {
-        // out of the matrix, we simply return 0
-       
+        // out of the matrix, we simply return
         if(row == m || col == n)
         {
             return 0;
