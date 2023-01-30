@@ -1,11 +1,9 @@
 package Graphs.BFS;
 
-import Graphs.HamiltonianPathCycle;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class bfs {
+public class BFS_Implementataion {
     static class Edge {
         int u;
         int v;
