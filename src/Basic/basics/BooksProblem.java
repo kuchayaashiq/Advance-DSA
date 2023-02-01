@@ -1,6 +1,5 @@
-package basic;
+package Basic.basics;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BooksProblem {

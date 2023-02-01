@@ -1,11 +1,11 @@
-package basic;
+package Basic.basics;
 
 import java.util.HashSet;
 
 public class ArrayIntersection {
     public static void main(String[] args) {
-        int arr1[] = {1, 1, 2, 2, 2};
-        int arr2[] = {1, 2, 2, 3};
+        int[] arr1 = {1, 1, 2, 2, 2};
+        int[] arr2 = {1, 2, 2, 3};
         HashSet<Integer> hs = new HashSet<>();
         int i =0, j= 0;
         while (i < arr1.length && j < arr2.length){

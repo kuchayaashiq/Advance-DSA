@@ -1,7 +1,6 @@
 package basic;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 /*Explanation:
         Here n=148 and k=3 , so p=148148148.
@@ -37,9 +36,9 @@ public class DigitSumProblemUsingRecursion {
             return sum;
         int fsum = super_digit(sum);
         return fsum;
-
-
     }
+
+
 
     private static int sumOfDigits(int num) {
         int sum =0,rem;

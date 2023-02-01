@@ -1,6 +1,5 @@
 package basic;
 
-import java.security.AllPermission;
 import java.util.Scanner;
 
 public class OccuranceOfKey {
