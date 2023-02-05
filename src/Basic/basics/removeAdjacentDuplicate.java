@@ -23,7 +23,6 @@ public class removeAdjacentDuplicate {
 
             while(str.length() >1 && str.charAt(0)==str.charAt(1))
                 str = str.substring(1,str.length());
-                str = str.substring(1,str.length());
             return removeAdjacent(str,last);
         }
         String remStr =removeAdjacent(str.substring(1, str.length()), last);

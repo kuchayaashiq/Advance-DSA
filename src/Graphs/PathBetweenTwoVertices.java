@@ -43,7 +43,7 @@ public class PathBetweenTwoVertices {
         return ans;
     }
 
-    static boolean check(int N, int M, ArrayList<ArrayList<Integer>> Edges, int U, int V) {
+    private  static boolean check(int N, int M, ArrayList<ArrayList<Integer>> Edges, int U, int V) {
         // N vertices, M edges
         ArrayList<Integer>[] graph = new ArrayList[N];
         for(int i=0; i<N; i++){
